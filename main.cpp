@@ -16,13 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
- 
+ int
+ bool
+ char
+ float
+ double
+ void
  
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
@@ -65,9 +64,29 @@ void variableDeclarations()
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
     
+    int dayOfMonth = 28;
+    int age = 40; 
+    int counter = 1;
 
-    
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    bool johnnyFiveIsAlive = true;
+    bool stringIsEmpty = false;
+    bool deviceConnected = true; 
+
+    char firstInitial = 'J';
+    char lastInitial = 'D';
+    char sex = 'M';
+
+    float ounces = 1.5f;
+    float centimeterInInch = 2.54f;
+    float voltage = 3.3f; 
+
+    double pi = 3.141592653589;
+    double e = 2.718281828459;
+    double phi = 1.618033988749;
+
+
+
+    ignoreUnused(number, dayOfMonth, age, counter, johnnyFiveIsAlive, stringIsEmpty, deviceConnected, firstInitial, lastInitial, sex, ounces, centimeterInInch, voltage, pi, e, phi); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -84,42 +103,82 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
+void makePayment(float paymentDay, float paymentMonth, float paymentAmount = 100.00f)
+{
+    ignoreUnused(paymentDay, paymentMonth, paymentAmount);
+}
 
 /*
  2)
  */
-
+void packLuggage(int numOfSocks, int numberOfShirts, int numberOfPants)
+{
+    ignoreUnused(numOfSocks, numberOfShirts, numberOfPants);
+}
 /*
  3)
  */
+float calculateTaxes(float subTotal, float taxRate = 0.055f)
+{
+    ignoreUnused(subTotal, taxRate);
+    return {};
+}
 
 /*
  4)
  */
-
+double calculatePi(int numberOfDigits = 12)
+{
+    ignoreUnused(numberOfDigits);
+    return {};
+}
 /*
  5)
  */
+void takeNap(int hours, int minutes = 30)
+{
+    ignoreUnused(hours, minutes);
+}
 
 /*
  6)
  */
+void moveChessPiece(char sourceSquareColumn, int sourceSquareRow, char destinationSquareColumn, int destinationSquareRow, bool isCheck = false, bool isCheckmate = false)
+{
+    ignoreUnused(sourceSquareColumn, sourceSquareRow, destinationSquareColumn, destinationSquareRow, isCheck, isCheckmate);
+}
 
 /*
  7)
  */
+void tuneRadio(float centerFrequency, bool automaticGainControl = true)
+{
+    ignoreUnused(centerFrequency, automaticGainControl);
+}
 
 /*
  8)
  */
+void practiceGuitar(int hours, int minutes)
+{
+    ignoreUnused(hours, minutes);
+}
 
 /*
  9)
  */
+void feedDog(int foodType, int ounces = 16)
+{
+    ignoreUnused(foodType, ounces);
+}
 
 /*
  10)
  */
+void liftWeights(int weightInPounds, int numberOfReps = 12, int numberOfSets = 2)
+{
+    ignoreUnused(weightInPounds, numberOfReps, numberOfSets);
+}
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -141,27 +200,36 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    makePayment(1, 11, 100.00f);
+
     //2)
-    
+    packLuggage(4, 4, 2);
+
     //3)
-    
+    auto taxesOwed = calculateTaxes(54.38f, 0.055f);
+
     //4)
-    
+    auto pi = calculatePi(12);
+
     //5)
-    
+    takeNap(0, 30);
+
     //6)
-    
+    moveChessPiece('d', 1, 'a', 4, true, false);
+
     //7)
-    
+    tuneRadio(7.074f, false);
+
     //8)
-    
+    practiceGuitar(1, 30);
+
     //9)
-    
+    feedDog(1, 16);
+
     //10)
+    liftWeights(25, 8, 3);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, taxesOwed, pi);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
