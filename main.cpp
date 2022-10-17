@@ -103,20 +103,23 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-void makePayment(float paymentDay, float paymentMonth, float paymentAmount = 100.00f){
+void makePayment(float paymentDay, float paymentMonth, float paymentAmount = 100.00f)
+{
     ignoreUnused(paymentDay, paymentMonth, paymentAmount);
 }
 
 /*
  2)
  */
-void packLuggage(int numOfSocks, int numberOfShirts, int numberOfPants){
+void packLuggage(int numOfSocks, int numberOfShirts, int numberOfPants)
+{
     ignoreUnused(numOfSocks, numberOfShirts, numberOfPants);
 }
 /*
  3)
  */
-float calculateTaxes(float subTotal, float taxRate = 0.055f){
+float calculateTaxes(float subTotal, float taxRate = 0.055f)
+{
     ignoreUnused(subTotal, taxRate);
     return {};
 }
@@ -124,49 +127,56 @@ float calculateTaxes(float subTotal, float taxRate = 0.055f){
 /*
  4)
  */
-double calculatePi(int numberOfDigits = 12){
+double calculatePi(int numberOfDigits = 12)
+{
     ignoreUnused(numberOfDigits);
     return {};
 }
 /*
  5)
  */
-void takeNap(int hours, int minutes = 30){
+void takeNap(int hours, int minutes = 30)
+{
     ignoreUnused(hours, minutes);
 }
 
 /*
  6)
  */
-void moveChessPiece(char sourceSquareColumn, int sourceSquareRow, char destinationSquareColumn, int destinationSquareRow, bool isCheck = false, bool isCheckmate = false){
+void moveChessPiece(char sourceSquareColumn, int sourceSquareRow, char destinationSquareColumn, int destinationSquareRow, bool isCheck = false, bool isCheckmate = false)
+{
     ignoreUnused(sourceSquareColumn, sourceSquareRow, destinationSquareColumn, destinationSquareRow, isCheck, isCheckmate);
 }
 
 /*
  7)
  */
-void tuneRadio(float centerFrequency, bool automaticGainControl = true){
+void tuneRadio(float centerFrequency, bool automaticGainControl = true)
+{
     ignoreUnused(centerFrequency, automaticGainControl);
 }
 
 /*
  8)
  */
-void practiceGuitar(int hours, int minutes){
+void practiceGuitar(int hours, int minutes)
+{
     ignoreUnused(hours, minutes);
 }
 
 /*
  9)
  */
-void feedDog(int foodType, int ounces = 16){
+void feedDog(int foodType, int ounces = 16)
+{
     ignoreUnused(foodType, ounces);
 }
 
 /*
  10)
  */
-void liftWeights(int weightInPounds, int numberOfReps = 12, int numberOfSets = 2){
+void liftWeights(int weightInPounds, int numberOfReps = 12, int numberOfSets = 2)
+{
     ignoreUnused(weightInPounds, numberOfReps, numberOfSets);
 }
 
